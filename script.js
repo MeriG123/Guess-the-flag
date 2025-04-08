@@ -38,7 +38,7 @@ function sortPais(){
     paisSorteado = paises[randomIndex];
 
     pais = paisSorteado.translations?.pt; // Nome do país
-    bandeira = paisSorteado.flag; // URL da bandeira
+    bandeira = paisSorteado.flags.png; // URL da bandeira
 
     // Adiciona o país correto à lista de opções
     nomeButtons.push(paisSorteado);
