@@ -13,6 +13,7 @@ let nomeButtons = [];//lista para colocar os paises
 let randomIndex= [];
 let paisSorteado= [];
 let paises = [];
+let round = 0;
 
 //.flags.png; caminho da bandeira
 //.translations.por.common; caminho para achar o país
@@ -93,6 +94,11 @@ function button(){
 
 // Função para verificar a resposta
 function ponts(event) {
+
+    if(round === 10){
+        dados()
+        window.location.href = "./final.html";
+    }
     let botaoClick = event.target.textContent;
 
     if (botaoClick === pais) {
@@ -111,7 +117,19 @@ function ponts(event) {
         pontuacaoElemento.style.color = "";
         button()
         sortPais()
+        round += 1;
     }, 100);
+}
+
+//-----------------Local Storage------------------//
+function dados(){
+    let dados = localStorage.getItem("Jogador");
+    jogador = dados ? JSON.parse(dados) : {};
+    jogador.pontuacao = pontuacao;
+    
+    localStorage.setItem("Jogador", JSON.stringify(jogador));
+
+
 }
 
 //-----------------Cronometro---------------------//

@@ -1,11 +1,6 @@
-let dados = document.getElementById('form');
+let nome = document.getElementById('seu_nome');
 
-dados.addEventListener('submit', (e) => {
-    let nome= dados.seu_nome.value;
-    localStorage.setItem('nome', nome);
-
-    window.onload = function () {
-       let nomeArmazenado = localStorage.getItem('nome')
-   
-    }
-})
+function dados(){
+    localStorage.setItem("Jogador", JSON.stringify({nome:nome.value}));
+    window.location.href = "index.html";
+}
