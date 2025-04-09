@@ -19,7 +19,7 @@ let paises = [];
 
 
 //pegar todos os dados da API e Amazerna dentro de uma variavel
-fetch('https://restcountries.com/v2/all')
+fetch('./paises.json')
     .then(response => response.json())
     .then(data => {
         paises = data;
