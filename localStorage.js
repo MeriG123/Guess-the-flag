@@ -2,5 +2,5 @@ let nome = document.getElementById('seu_nome');
 
 function dados(){
     localStorage.setItem("Jogador", JSON.stringify({nome:nome.value}));
-    window.location.href = "index.html";
+    window.location.href = "jogo.html";
 }

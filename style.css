@@ -68,7 +68,7 @@ body{
 
 /* Imagem logo */
 #img_logo img{
-    width: clamp(100px, 9.2vw, 195px);
+    width: clamp(130px, 9.2vw, 195px);
    
 }
 
