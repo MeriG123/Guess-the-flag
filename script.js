@@ -95,10 +95,7 @@ function button(){
 // Função para verificar a resposta
 function ponts(event) {
 
-    if(round === 10){
-        dados()
-        window.location.href = "./final.html";
-    }
+    
     let botaoClick = event.target.textContent;
 
     if (botaoClick === pais) {
@@ -114,6 +111,10 @@ function ponts(event) {
     
     // Sorteia um novo país após a resposta
     setTimeout(() => {
+        if(round === 9){
+            dados()
+            window.location.href = "./final.html";
+        }
         pontuacaoElemento.style.color = "";
         button()
         sortPais()
