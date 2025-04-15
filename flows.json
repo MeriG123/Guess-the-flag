@@ -1,5 +1,13 @@
 [
     {
+        "id": "f0c65390ea861234",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "126c40cf4cb3aeeb",
         "type": "http in",
         "z": "f0c65390ea861234",
@@ -9,6 +17,54 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 750,
+        "y": 300,
+        "wires": [
+            [
+                "013a246f0cd65995"
+            ]
+        ]
+    },
+    {
+        "id": "013a246f0cd65995",
+        "type": "function",
+        "z": "f0c65390ea861234",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 380,
+        "wires": [
+            [
+                "545095cb5b084a47"
+            ]
+        ]
+    },
+    {
+        "id": "545095cb5b084a47",
+        "type": "http response",
+        "z": "f0c65390ea861234",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 590,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8a6c3afa8a656375",
+        "type": "http in",
+        "z": "f0c65390ea861234",
+        "name": "",
+        "url": "/dados",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 570,
         "y": 300,
         "wires": [
             [
