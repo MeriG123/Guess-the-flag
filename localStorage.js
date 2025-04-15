@@ -8,7 +8,7 @@ async function dados(){
         let resposta = await fetch("http://127.0.0.1:1880/dados",{
             method: "POST",
             headers: {"Content-Type": "application/json" },
-            body:JSON.stringify({nome})
+            body:JSON.stringify({nome: nome.value})
 
         });
 
@@ -22,4 +22,5 @@ async function dados(){
         console.error("Erro ao enviar dados:", erro);
         alert("Não foi possível enviar os dados")
     }
+    
 }
